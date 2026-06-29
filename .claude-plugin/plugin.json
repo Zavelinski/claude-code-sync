@@ -1,0 +1,18 @@
+{
+  "name": "sync",
+  "description": "Check locally installed Claude Code skills against the latest published GitHub version and report drift; with the user's OK, sync outdated public skills. Always states the current tool version first.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zavelinski"
+  },
+  "homepage": "https://github.com/Zavelinski/claude-code-sync",
+  "repository": "https://github.com/Zavelinski/claude-code-sync",
+  "license": "MIT",
+  "keywords": [
+    "versioning",
+    "sync",
+    "skills",
+    "maintenance",
+    "drift"
+  ]
+}

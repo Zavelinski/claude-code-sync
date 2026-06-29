@@ -1,0 +1,24 @@
+name: validate-plugin
+on:
+  push:
+    paths:
+      - '.claude-plugin/plugin.json'
+      - 'skills/**/SKILL.md'
+      - '.github/workflows/validate-plugin.yml'
+      - '.github/scripts/validate-plugin.js'
+  pull_request:
+    paths:
+      - '.claude-plugin/plugin.json'
+      - 'skills/**/SKILL.md'
+      - '.github/workflows/validate-plugin.yml'
+      - '.github/scripts/validate-plugin.js'
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node .github/scripts/validate-plugin.js
